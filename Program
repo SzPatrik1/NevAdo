@@ -1,0 +1,22 @@
+
+#!/bin/bash/sh
+while getopts ":hn" opt; do
+        case ${opt} in
+        h )
+        curl "https://nemharapok.hu/kan-kutyanevek-listaja-a-tol-z-ig.html" | grep "><strong>*" | sed 's/<td width="307"><strong>//g' | sed 's/<\/tr><tr>//g' | sed 's$
+        shuf -n 1 nevek.txt
+        exit
+        ;;
+        n )
+        curl "https://nemharapok.hu/nosteny-kutyanevek-listaja-tol-z-ig.html" | grep "<\/tr><tr><td valign*" | sed 's/<\/tr><tr><td valign="top" width="633">//g' | se$
+        shuf -n 1 nevek.txt
+        exit
+        ;;
+        \? )
+        echo "Hiba"
+        exit
+        ;;
+        esac
+done
+curl "https://nemharapok.hu/kan-kutyanevek-listaja-a-tol-z-ig.html" | grep "><strong>*" | sed 's/<td width="307"><strong>//g' | sed 's/<\/tr><tr>//g' | sed 's/<\/stro$
+shuf -n 1 nevek.txt
